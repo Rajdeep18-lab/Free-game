@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="game-card">
+        <div class="title-row">
+          <div>
+            <p class="badge">Arcade Edition</p>
+            <h1>Tic-Tac-Toe</h1>
+          </div>
+          <div class="meta-pill">
+            <span>Round</span>
+            <strong id="roundCount">1</str  ong>
+          </div>
+        </div>
+        <p id="status" class="status" aria-live="polite">Player X's turn</p>
+
+        <div class="top-controls">
+          <label class="control">
+            <span>Mode</span>
+            <select id="modeSelect" aria-label="Game mode">
+              <option value="pvp">2 Players</option>
+              <option value="ai-easy">Vs AI (Easy)</option>
+              <option value="ai-hard">Vs AI (Hard)</option>
+            </select>
+          </label>
+          <button id="soundToggleBtn" class="icon-btn" aria-label="Toggle sound">
+            Sound: On
+          </button>
+        </div>
+        <p class="mode-info">Current mode: <strong id="modeText">2 Players</strong></p>
+
+        <div class="player-panel">
+          <article id="xPanel" class="player-card player-card-x active">
+            <span class="player-small">Player X</span>
+            <strong>Blue Striker</strong>
+          </article>
+          <article id="oPanel" class="player-card player-card-o">
+            <span class="player-small">Player O</span>
+            <strong>Dark Phantom</strong>
+          </article>
+        </div>
+
+        <div class="scoreboard" aria-label="Game score board">
+          <div class="score score-x">
+            <span class="score-label">X Wins</span>
+            <strong id="xScore">0</strong>
+          </div>
+          <div class="score score-draw">
+            <span class="score-label">Draws</span>
+            <strong id="drawScore">0</strong>
+          </div>
+          <div class="score score-o">
+            <span class="score-label">O Wins</span>
+            <strong id="oScore">0</strong>
+          </div>
+        </div>
+
+        <div id="boardWrap" class="board-wrap">
+          <div id="winLine" class="win-line" aria-hidden="true"></div>
+          <div id="board" class="board" role="grid" aria-label="Tic-Tac-Toe board">
+          <button class="cell" data-index="0" aria-label="Cell 1"></button>
+          <button class="cell" data-index="1" aria-label="Cell 2"></button>
+          <button class="cell" data-index="2" aria-label="Cell 3"></button>
+          <button class="cell" data-index="3" aria-label="Cell 4"></button>
+          <button class="cell" data-index="4" aria-label="Cell 5"></button>
+          <button class="cell" data-index="5" aria-label="Cell 6"></button>
+          <button class="cell" data-index="6" aria-label="Cell 7"></button>
+          <button class="cell" data-index="7" aria-label="Cell 8"></button>
+          <button class="cell" data-index="8" aria-label="Cell 9"></button>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="restartBtn" class="btn btn-primary">Restart Game</button>
+          <button id="newGameBtn" class="btn btn-secondary">New Match</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
